@@ -56,7 +56,7 @@ def update_namecheap_ip(ip):
 
 def check_response(resp):
     """ Check Namecheap XML response """
-    root = ET.fromstring(response.read())
+    root = ET.fromstring(resp.read())
     errors_count = root.find("ErrCount").text
 
     if errors_count == 0:
